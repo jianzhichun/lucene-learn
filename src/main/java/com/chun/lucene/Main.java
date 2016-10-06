@@ -22,7 +22,7 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		Analyzer ana = CustomAnalyzer.builder(Paths.get("."))
 //				   .withTokenizer(StandardTokenizerFactory.class)
-				   .withTokenizer(EnglishPosTagTokenizerFactory.class,"modelfile","src/main/resources/english-left3words-distsim.tagger","isStem","true")
+				   .withTokenizer(EnglishPosTagTokenizerFactory.class)
 //				   .addTokenFilter(StandardFilterFactory.class)
 //				   .addTokenFilter(LowerCaseFilterFactory.class)
 				   .addTokenFilter(StopFilterFactory.class, "ignoreCase", "false", "words", "stopwords.txt")

@@ -25,7 +25,7 @@ public class EnglishPosTagTokenizerFactory extends TokenizerFactory {
 	public Tokenizer create(AttributeFactory factory) {
 		EnglishPosTagTokenizer englishPosTagTokenizer = new EnglishPosTagTokenizer(factory);
 		try {
-			String modelpath = get(args, "modelfile");
+			String modelpath = get(args, "modelfile", "src/main/resources/english-left3words-distsim.tagger");
 			String whitelist = get(args, "whitelist");
 			String blacklist = get(args, "blacklist");
 			EnglishPosTagTokenizer.setStem(getBoolean(args, "isStem",false));
